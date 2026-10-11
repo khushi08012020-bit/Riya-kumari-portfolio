@@ -121,7 +121,7 @@
           <!-- Availability / Honors Badge -->
           <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full badge-status mb-6">
             <span class="badge-dot"></span>
-            <span class="badge-text font-mono text-xs">Cardano Hack Finalist (Top 100 Asia) &bull; Open for Internships & Roles</span>
+            <span class="badge-text font-mono text-xs">🏆 3rd Prize @ Smart Horizon Hackathon &bull; Cardano Hack Finalist (Top 100 Asia) &bull; Open for Roles</span>
           </div>
 
           <!-- Main Greeting & Name -->
@@ -174,6 +174,10 @@
           <!-- Key metric highlights -->
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-16 pt-10 border-t border-glass">
             <div class="stat-card">
+              <div class="stat-number">3rd Prize</div>
+              <div class="stat-label">Smart Horizon '26 (48h Hack)</div>
+            </div>
+            <div class="stat-card">
               <div class="stat-number">Top 100</div>
               <div class="stat-label">Asia Finalist (Cardano Hack)</div>
             </div>
@@ -184,10 +188,6 @@
             <div class="stat-card">
               <div class="stat-number">5</div>
               <div class="stat-label">Verified Certifications</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">2027</div>
-              <div class="stat-label">Graduating Cohort</div>
             </div>
           </div>
 
@@ -393,9 +393,79 @@
           <div class="section-line mx-auto"></div>
         </div>
 
-        <div class="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           
-          <!-- PROJECT 1: IdentiPI -->
+          <!-- PROJECT 1: FRAB -->
+          <div class="glass-card project-card relative overflow-hidden flex flex-col justify-between">
+            <div class="project-banner project-banner-frab">
+              <div class="project-badge-top">
+                <i class="fa-solid fa-trophy text-amber-400"></i> 3rd Prize &bull; Smart Horizon '26 (48h Hack)
+              </div>
+              <div class="project-icon-float">
+                <i class="fa-solid fa-building-shield"></i>
+              </div>
+            </div>
+
+            <div class="p-8 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs font-mono text-accent uppercase tracking-wider">Multi-Agent AI &bull; FinTech &bull; AML</span>
+                  <span class="status-pill status-success"><span class="dot"></span> 3rd Prize</span>
+                </div>
+                <h3 class="text-2xl font-display font-bold mb-2">FRAB &ndash; Financial Crime Investigator</h3>
+                <div class="inline-block px-2.5 py-1 rounded-md bg-accent-glow text-accent font-semibold text-xs mb-4">
+                  <i class="fa-solid fa-magnifying-glass-chart"></i> My Role: Research & Investigation Architecture
+                </div>
+                <p class="text-secondary text-sm leading-relaxed mb-6">
+                  Autonomous multi-agent financial crime investigation system that transforms suspicious banking alerts into evidence-backed, explainable, and audit-ready AML cases.
+                </p>
+
+                <!-- Key architectural highlights -->
+                <div class="project-features-list mb-6 space-y-2">
+                  <div class="feature-item">
+                    <i class="fa-solid fa-check text-accent text-xs"></i>
+                    <span><strong>Research & Domain Grounding:</strong> Led regulatory research across FATF recommendations & agentic AI compliance frameworks.</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fa-solid fa-check text-accent text-xs"></i>
+                    <span><strong>5 Specialized Agents:</strong> Orchestrated Supervisor pipeline (Watchman, Detective, Jurist, Scribe, Voice Escalation).</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fa-solid fa-check text-accent text-xs"></i>
+                    <span><strong>Zero Unsupported Guesses:</strong> Deterministic tools calculate metrics & deviations; Gemma LLM reasons over verified facts.</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fa-solid fa-check text-accent text-xs"></i>
+                    <span><strong>Controlled Scenario Testing:</strong> Validated 10 benchmark fraud scenarios including structuring & mule patterns.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <!-- Tech stack chips -->
+                <div class="flex flex-wrap gap-2 pt-4 border-t border-glass mb-6">
+                  <span class="tech-pill">Multi-Agent AI</span>
+                  <span class="tech-pill">TypeScript</span>
+                  <span class="tech-pill">React</span>
+                  <span class="tech-pill">Gemma</span>
+                  <span class="tech-pill">GCP VM</span>
+                  <span class="tech-pill">FATF AML</span>
+                </div>
+
+                <!-- Action links -->
+                <div class="flex items-center gap-3">
+                  <a href="https://github.com/khushi08012020-bit/FRAB-financial-crime-investigator" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                    <i class="fa-brands fa-github"></i> View on GitHub
+                  </a>
+                  <button class="btn btn-sm btn-outline modal-trigger" data-target="modal-frab">
+                    <i class="fa-solid fa-circle-info"></i> Project Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: IdentiPI -->
           <div class="glass-card project-card relative overflow-hidden flex flex-col justify-between">
             <div class="project-banner project-banner-web3">
               <div class="project-badge-top">
@@ -462,7 +532,7 @@
             </div>
           </div>
 
-          <!-- PROJECT 2: PrintX -->
+          <!-- PROJECT 3: PrintX -->
           <div class="glass-card project-card relative overflow-hidden flex flex-col justify-between">
             <div class="project-banner project-banner-ai">
               <div class="project-badge-top">
@@ -927,7 +997,45 @@
   <!-- TOAST NOTIFICATION CONTAINER -->
   <div id="toast-container" class="toast-container"></div>
 
-  <!-- PROJECT MODAL 1: IdentiPI -->
+  <!-- PROJECT MODAL 1: FRAB -->
+  <div id="modal-frab" class="modal-backdrop">
+    <div class="modal-box glass-card max-w-3xl">
+      <div class="modal-header">
+        <div>
+          <span class="badge-status font-mono text-xs"><i class="fa-solid fa-trophy text-amber-400"></i> 3rd Prize Winner &bull; Smart Horizon 2026 (48-Hr Hackathon)</span>
+          <h3 class="text-2xl font-bold font-display mt-1">FRAB &ndash; Financial Risk Analysis & Behavioral Investigation</h3>
+        </div>
+        <button class="modal-close" data-close="modal-frab">&times;</button>
+      </div>
+      <div class="modal-body space-y-4">
+        <div class="bg-surface-subtle p-3 rounded-xl border border-glass text-xs flex items-center justify-between">
+          <span class="text-accent font-semibold"><i class="fa-solid fa-user-check"></i> My Contribution: Research & Investigation Architecture</span>
+          <span class="text-muted font-mono">Theme: FinTech (SH-FIN-01)</span>
+        </div>
+
+        <p class="text-secondary text-sm">
+          <strong>FRAB</strong> is an autonomous multi-agent financial crime investigation system that bridges the critical bottleneck in banking security: <em>"An alert tells you something is unusual; FRAB tells you why."</em> It automates the investigation of suspicious transaction alerts into audit-ready cases with explainable evidence trails.
+        </p>
+        
+        <h4 class="font-bold text-sm text-primary">Core Architecture & My Research Contributions:</h4>
+        <ul class="text-xs text-muted space-y-2 list-disc list-inside">
+          <li><strong>Domain Research & Regulatory Grounding:</strong> Extensively researched risk-based Anti-Money Laundering (AML/CFT) frameworks, FATF recommendations, and recent academic agentic AI architectures (Axelsen et al. 2025, Naik et al. 2025).</li>
+          <li><strong>5 Specialized Agents Orchestration:</strong> Coordinated by a Supervisor agent &mdash; <em>Watchman</em> (alert triage), <em>Detective</em> (behavior & transaction baseline evidence), <em>Jurist</em> (regulatory context mapping), <em>Scribe</em> (audit-ready case compilation), and <em>Voice Escalation</em>.</li>
+          <li><strong>Deterministic Evidence Verification:</strong> Designed system boundaries so all metric deviations, counterparty flows, and velocity anomalies are computed by deterministic tools; Gemma LLM strictly performs contextual reasoning, preventing ungrounded hallucinations.</li>
+          <li><strong>Controlled Scenario Validation:</strong> Formulated 10 reproducible benchmark scenarios including structuring, rapid mule cash-outs, velocity spikes, and account-drain protections.</li>
+          <li><strong>Confidential Execution:</strong> Architected pipeline deployment within GCP Confidential VMs ensuring banking data privacy.</li>
+        </ul>
+      </div>
+      <div class="modal-footer flex justify-end gap-3 pt-4 border-t border-glass">
+        <a href="https://github.com/khushi08012020-bit/FRAB-financial-crime-investigator" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+          <i class="fa-brands fa-github"></i> Repository
+        </a>
+        <button class="btn btn-sm btn-secondary" data-close="modal-frab">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT MODAL 2: IdentiPI -->
   <div id="modal-identipi" class="modal-backdrop">
     <div class="modal-box glass-card">
       <div class="modal-header">

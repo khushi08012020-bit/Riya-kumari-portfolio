@@ -49,10 +49,11 @@ function initTypewriter() {
   if (!typewriterElement) return;
 
   const roles = [
+    '3rd Prize Winner @ Smart Horizon',
+    'Financial Crime AI Researcher',
     'Full-Stack Developer',
+    'Cardano Hack Finalist (Top 100 Asia)',
     'Web3 & ZKP Explorer',
-    'Cardano Hack Finalist',
-    'AI Autonomous Systems Builder',
     'Computer Science Engineer'
   ];
 

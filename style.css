@@ -788,6 +788,11 @@ html:not(.dark) .theme-btn .light-icon {
   padding: 1.25rem 1.75rem;
 }
 
+.project-banner-frab {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.25) 0%, rgba(16, 185, 129, 0.35) 100%);
+  border-bottom: 1px solid var(--border-glass);
+}
+
 .project-banner-web3 {
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.25) 0%, rgba(139, 92, 246, 0.4) 100%);
   border-bottom: 1px solid var(--border-glass);

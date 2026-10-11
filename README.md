@@ -9,7 +9,8 @@ A modern, responsive, and performance-optimized personal portfolio website built
   - **About Section:** Narrative overview, key engineering strengths, quick-copy contact details, and location.
   - **Skills Section:** Categorized into Languages, Frameworks, Databases & Storage, and Web3 / AI & Cloud.
   - **Projects Showcase:** Detailed deep-dives into:
-    - **IdentiPI** (Privacy-First KYC dApp, Cardano Hack Finalist Top 100 Asia)
+    - **FRAB** (Financial Risk Analysis & Behavioral Investigation &mdash; 3rd Prize Winner at Smart Horizon '26 48-hr Hackathon)
+    - **IdentiPI** (Privacy-First KYC dApp &mdash; Cardano Hack Finalist Top 100 Asia)
     - **PrintX** (AI-Powered Autonomous Printing System with AWS Bedrock & Lambda)
     - Interactive modals with architectural breakdowns and direct GitHub repository links.
   - **Certifications & Trainings:** Timeline cards covering COMED KARES and Vtricks Technologies / Sambhram Institute programs.
