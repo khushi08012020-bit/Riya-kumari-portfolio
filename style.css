@@ -892,6 +892,11 @@ html:not(.dark) .theme-btn .light-icon {
   flex-shrink: 0;
 }
 
+.bg-emerald-gradient {
+  background: linear-gradient(135deg, #10b981, #059669);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
 .bg-pink-gradient {
   background: linear-gradient(135deg, #ec4899, #f43f5e);
   box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);

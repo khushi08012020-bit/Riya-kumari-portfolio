@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollSpy();
   initCopyButtons();
   initModals();
+  initCertificateModal();
   initContactForm();
   initBackToTop();
   updateCurrentYear();
@@ -244,6 +245,34 @@ function initModals() {
       });
       document.body.style.overflow = '';
     }
+  });
+}
+
+/* --------------------------------------------------------------------------
+   6b. Certificate Lightbox Modal
+   -------------------------------------------------------------------------- */
+function initCertificateModal() {
+  const certButtons = document.querySelectorAll('.cert-preview-btn');
+  const certModal = document.getElementById('modal-certificate');
+  const certImg = document.getElementById('cert-modal-img');
+  const certTitle = document.getElementById('cert-modal-title');
+  const certLink = document.getElementById('cert-modal-link');
+
+  if (!certModal) return;
+
+  certButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const imgSrc = btn.getAttribute('data-img');
+      const title = btn.getAttribute('data-title');
+
+      if (certImg) certImg.src = imgSrc;
+      if (certTitle) certTitle.textContent = title;
+      if (certLink) certLink.href = imgSrc;
+
+      certModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
   });
 }
 

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Riya Kumari - Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    :root {
+      --primary: #0f172a;
+      --secondary: #334155;
+      --muted: #64748b;
+      --accent: #4f46e5;
+      --border: #e2e8f0;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background-color: var(--bg);
+      color: var(--primary);
+      line-height: 1.55;
+      font-size: 14px;
+      padding: 2rem 1rem;
+    }
+
+    .resume-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 2.5rem 3rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      border: 1px solid var(--border);
+    }
+
+    .action-bar {
+      max-width: 860px;
+      margin: 0 auto 1.5rem auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 1.2rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: #4338ca;
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: var(--secondary);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover {
+      background: #f1f5f9;
+    }
+
+    /* Header */
+    .resume-header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .resume-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--primary);
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0.75rem 1.25rem;
+      font-size: 0.85rem;
+      color: var(--secondary);
+    }
+
+    .contact-row a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact-row a:hover {
+      text-decoration: underline;
+    }
+
+    /* Section styling */
+    .section {
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--primary);
+      border-bottom: 1.5px solid var(--border);
+      padding-bottom: 0.35rem;
+      margin-bottom: 0.85rem;
+    }
+
+    /* Summary */
+    .summary-text {
+      color: var(--secondary);
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    /* Education & Projects entries */
+    .entry {
+      margin-bottom: 1rem;
+    }
+    .entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.95rem;
+    }
+
+    .entry-subheader {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.85rem;
+      color: var(--secondary);
+      margin-top: 0.15rem;
+      font-style: italic;
+    }
+
+    .entry-location, .entry-date {
+      font-weight: 500;
+      font-style: normal;
+      color: var(--muted);
+      font-size: 0.825rem;
+    }
+
+    ul.bullet-list {
+      margin-top: 0.4rem;
+      padding-left: 1.25rem;
+      color: var(--secondary);
+    }
+
+    ul.bullet-list li {
+      margin-bottom: 0.3rem;
+      line-height: 1.5;
+    }
+
+    /* Skills list */
+    .skills-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .skills-row {
+      display: flex;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+    }
+
+    .skills-label {
+      font-weight: 700;
+      min-width: 140px;
+      color: var(--primary);
+    }
+
+    .skills-values {
+      color: var(--secondary);
+    }
+
+    /* Certifications */
+    .cert-item {
+      margin-bottom: 0.9rem;
+    }
+    .cert-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .cert-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.925rem;
+      font-weight: 700;
+    }
+
+    .cert-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.775rem;
+      color: var(--accent);
+      background: #ede9fe;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .cert-link:hover {
+      background: #ddd6fe;
+      text-decoration: none;
+    }
+
+    .cert-desc {
+      font-size: 0.825rem;
+      color: var(--secondary);
+      margin-top: 0.2rem;
+      line-height: 1.45;
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+      }
+      .action-bar {
+        display: none !important;
+      }
+      .resume-wrapper {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      .cert-link {
+        border: 1px solid #cbd5e1;
+        background: transparent;
+        color: #1e293b;
+      }
+      a {
+        text-decoration: none;
+        color: inherit !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Action Bar -->
+  <div class="action-bar">
+    <a href="index.html" class="btn btn-secondary">
+      <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+    </a>
+    <div style="display: flex; gap: 0.75rem;">
+      <button onclick="window.print()" class="btn btn-primary">
+        <i class="fa-solid fa-print"></i> Print / Save as PDF
+      </button>
+    </div>
+  </div>
+
+  <main class="resume-wrapper">
+    <!-- Header -->
+    <header class="resume-header">
+      <h1 class="resume-name">Riya Kumari</h1>
+      <div class="contact-row">
+        <span><i class="fa-solid fa-phone"></i> +91 8340460652</span>
+        <span>&bull;</span>
+        <span><i class="fa-regular fa-envelope"></i> <a href="mailto:khushi08012020@gmail.com">khushi08012020@gmail.com</a></span>
+        <span>&bull;</span>
+        <span><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/riya-kumari-129910294" target="_blank">linkedin.com/in/riya-kumari-129910294</a></span>
+        <span>&bull;</span>
+        <span><i class="fa-brands fa-github"></i> <a href="https://github.com/khushi08012020-bit" target="_blank">github.com/khushi08012020-bit</a></span>
+      </div>
+    </header>
+
+    <!-- Summary -->
+    <section class="section">
+      <h2 class="section-title">Summary</h2>
+      <p class="summary-text">
+        Results-driven Computer Engineering undergraduate with a strong foundation in software engineering principles, object-oriented programming, database management, and full-stack development. Cardano Hack Finalist (Top 100 Asia) experienced in building decentralized zero-knowledge privacy protocols and generative AI cloud automation pipelines. Eager to leverage technical skills and problem-solving abilities to build impactful software solutions.
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      
+      <div class="entry">
+        <div class="entry-header">
+          <span>Sambhram Institute of Technology</span>
+          <span class="entry-location">Bangalore, India</span>
+        </div>
+        <div class="entry-subheader">
+          <span>B.E. in Computer Science Engineering | Current CGPA: 7.45/10</span>
+          <span class="entry-date">Aug 2023 &ndash; May 2027</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span>Eklavya Educational Complex</span>
+          <span class="entry-location">Palanga, Patna, Bihar, India</span>
+        </div>
+        <div class="entry-subheader">
+          <span>Higher Secondary (12th Grade) &mdash; 65%</span>
+          <span class="entry-date">March 2023</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span>S V M Residential Public School</span>
+          <span class="entry-location">Rajeev nagar, Patna, Bihar, India</span>
+        </div>
+        <div class="entry-subheader">
+          <span>Secondary School (10th Grade) &mdash; 80%</span>
+          <span class="entry-date">March 2021</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="section">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skills-row">
+          <span class="skills-label">Languages:</span>
+          <span class="skills-values">Java, Python, C, JavaScript, HTML/CSS</span>
+        </div>
+        <div class="skills-row">
+          <span class="skills-label">Frameworks & Tools:</span>
+          <span class="skills-values">React, Node.js, Express, REST APIs, Git/GitHub</span>
+        </div>
+        <div class="skills-row">
+          <span class="skills-label">Databases:</span>
+          <span class="skills-values">MySQL (Relational), NoSQL / Unstructured Databases</span>
+        </div>
+        <div class="skills-row">
+          <span class="skills-label">Web3, AI & Cloud:</span>
+          <span class="skills-values">Midnight (ZKP), Veridian (DID), IPFS, AWS Bedrock, AWS Lambda, Strands SDK, Power BI</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section">
+      <h2 class="section-title">Projects</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span>IdentiPI &ndash; Privacy-First KYC dApp</span>
+          <span class="entry-date" style="color: var(--accent); font-weight: 600;">Cardano Hack Finalist (Top 100 Asia)</span>
+        </div>
+        <div class="entry-subheader">
+          <span>Midnight (ZKP), Veridian (DID), React, Node.js, IPFS, Strands SDK</span>
+          <span><a href="https://github.com/khushi08012020-bit/IdentiPI." target="_blank" style="color: var(--accent); text-decoration: none;"><i class="fa-brands fa-github"></i> Repository</a></span>
+        </div>
+        <ul class="bullet-list">
+          <li>Architected a decentralized identity platform utilizing Zero-Knowledge Proofs (ZKP) to verify user eligibility without compromising sensitive data.</li>
+          <li>Integrated Decentralized Identifiers (DID) with Veridian to issue immutable, reusable digital credentials.</li>
+          <li>Leveraged IPFS for secure, distributed storage of encrypted verification metadata.</li>
+          <li>Implemented selective disclosure logic, enabling granular data sharing for compliance checks.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span>PrintX &ndash; AI-Powered Autonomous Printing System</span>
+          <span class="entry-date" style="color: #d97706; font-weight: 600;">In Active Development</span>
+        </div>
+        <div class="entry-subheader">
+          <span>AWS Bedrock, Strands SDK, AWS Lambda, Serverless Cloud Storage</span>
+          <span><a href="https://github.com/khushi08012020-bit/PrintX" target="_blank" style="color: var(--accent); text-decoration: none;"><i class="fa-brands fa-github"></i> Repository</a></span>
+        </div>
+        <ul class="bullet-list">
+          <li>Developed an AI-powered printing platform that converts natural language instructions into automated document processing and printing workflows.</li>
+          <li>Integrated AWS Bedrock and Strands SDK for intelligent task planning, document validation, and workflow execution.</li>
+          <li>Implemented serverless architecture using AWS Lambda with secure cloud storage and automatic file deletion for privacy.</li>
+          <li>Reduced manual intervention and improved printing efficiency through intelligent workflow automation.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="section">
+      <h2 class="section-title">Certifications & Training</h2>
+
+      <div class="cert-item">
+        <div class="cert-title-row">
+          <span>Internet of Things (IoT) Program &mdash; COMED KARES Innovation Hub</span>
+          <a href="assets/certificates/internet-of-things-iot.jpg" target="_blank" class="cert-link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Certificate
+          </a>
+        </div>
+        <div class="entry-subheader">
+          <span>Conducted between 07/12/2024 and 10/05/2025</span>
+          <span class="entry-date">May 2025</span>
+        </div>
+        <p class="cert-desc">
+          Completed hands-on program developing embedded IoT problem-solving, hardware-software interfacing, and sensor-driven prototyping to address real-world community challenges.
+        </p>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-title-row">
+          <span>Innovation & Design Thinking Program &mdash; COMED KARES Innovation Hub</span>
+          <a href="assets/certificates/innovation-design-thinking.jpg" target="_blank" class="cert-link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Certificate
+          </a>
+        </div>
+        <div class="entry-subheader">
+          <span>Conducted between 18/03/2024 and 18/09/2024 (USN: 1ST23CS153)</span>
+          <span class="entry-date">Sept 2024</span>
+        </div>
+        <p class="cert-desc">
+          Certified in user-centric problem solving, empathy mapping, design thinking frameworks, and rapid agile prototyping methodologies through a 6-month innovation lifecycle.
+        </p>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-title-row">
+          <span>Java and SQL Skill Development Program &mdash; Vtricks & Sambhram Institute</span>
+          <a href="assets/certificates/java-sql-skill-development.jpg" target="_blank" class="cert-link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Certificate
+          </a>
+        </div>
+        <div class="entry-subheader">
+          <span>Conducted from 11th to 17th November 2024</span>
+          <span class="entry-date">Nov 2024</span>
+        </div>
+        <p class="cert-desc">
+          Developed proficiency in Java and SQL through hands-on projects involving object-oriented programming, relational databases, schema design, SQL queries, joins, and CRUD operations.
+        </p>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-title-row">
+          <span>Unstructured Database Design and Management &mdash; Vtricks & Sambhram Institute</span>
+          <a href="assets/certificates/unstructured-database-nosql.jpg" target="_blank" class="cert-link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Certificate
+          </a>
+        </div>
+        <div class="entry-subheader">
+          <span>Conducted from 5th to 11th May 2025</span>
+          <span class="entry-date">May 2025</span>
+        </div>
+        <p class="cert-desc">
+          Completed training covering NoSQL databases, unstructured data modeling, schema-less architecture design principles, document stores, and scalable data management.
+        </p>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-title-row">
+          <span>Data Analytics Using Python & PowerBI &mdash; Vtricks & Sambhram Institute</span>
+          <a href="assets/certificates/data-analytics-python-powerbi.jpg" target="_blank" class="cert-link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Certificate
+          </a>
+        </div>
+        <div class="entry-subheader">
+          <span>Conducted from 13th to 18th October 2025</span>
+          <span class="entry-date">Oct 2025</span>
+        </div>
+        <p class="cert-desc">
+          Built analytical capabilities using Python and Power BI performing automated data cleaning, exploratory analysis, interactive dashboard visualization, and business intelligence insights.
+        </p>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
